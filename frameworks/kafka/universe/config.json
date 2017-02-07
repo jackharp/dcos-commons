@@ -111,7 +111,7 @@
               "enable": {
                 "description": "Whether to enable JMX options",
                 "type": "boolean",
-                "default": false
+                "default": true
               },
               "remote": {
                 "description": "Whether to enable remote monitoring",
@@ -142,7 +142,12 @@
                 "description": "Whether to enable SSL client authentication for remote access",
                 "type": "boolean",
                 "default": false
-              }
+              },
+              "additional_kafka_jmx_opts": {
+                "description": "JMX argument string (i.e. \"-Dcom.sun.management.jmxremote.access.file=somefile\") to be appended to KAFKA_JMX_OPTS environment variable",
+                "type": "string",
+                "default": ""
+
             }
           },
           "statsd": {
